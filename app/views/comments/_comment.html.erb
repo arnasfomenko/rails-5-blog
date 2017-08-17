@@ -1,5 +1,5 @@
 <p>
-  <strong>Commenter:</strong>
+  <strong>Author:</strong>
   <%= comment.commenter %>
 </p>
 
@@ -7,9 +7,11 @@
   <strong>Comment:</strong>
   <%= comment.body %>
 </p>
-
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
-</p>
+<hr>
+<% if user_signed_in? == true %>
+    <p>
+      <%= link_to 'Destroy Comment', [comment.article, comment],
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' } %>
+    </p>
+<% end %>
