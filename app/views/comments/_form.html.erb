@@ -5,7 +5,7 @@
     <%= f.hidden_field :commenter, :value => current_user.email %>
   </p>
   <p>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "form-control" %>
   </p>
   <p>
     <%= f.submit class: "btn btn-info" %>
