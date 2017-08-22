@@ -11,7 +11,6 @@
 
 <script>
   var ArticlesShowView = {
-      userEmail: "<%= current_user.email %>",
-      articleId: <%= @article.id %>
+      articleId: "<%= params[:id] %>"
   }
 </script>
