@@ -21,7 +21,6 @@ class Show extends React.Component {
         let body = {
           comment: {
             body: document.getElementById('body').value,
-            commenter: document.getElementById('commenter').value
           }
         }
 
@@ -32,6 +31,7 @@ class Show extends React.Component {
               'Accept': 'application/json',
               'Content-Type': 'application/json'
             },
+            credentials: "same-origin",
             body: JSON.stringify(body).replace(/"(.+)":/g, '"$1":')
           })
           .then(response => response.json())
@@ -69,7 +69,6 @@ class Show extends React.Component {
 
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <p><h4>Add New Comment : </h4></p>
-                    <p><input id="commenter" type="hidden" name="comment[commenter]" value="email" /></p>
                     <p><textarea id="body" type="text" name="comment[body]" className="form-control"/></p>
 
                     <p><button className="btn btn-secondary" name="submit" type="submit">Submit a Comment</button></p>

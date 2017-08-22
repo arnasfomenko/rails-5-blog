@@ -42517,3 +42517,2314 @@ Processing by CommentsController#index as */*
 Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/articles" for 127.0.0.1 at 2017-08-22 15:16:29 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (33.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 893ms (Views: 881.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:16:32 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:16:32 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 36ms (Views: 20.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-08-22 15:27:10 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 52.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:27:12 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:27:12 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 14ms (Views: 7.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-08-22 15:36:44 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:36:46 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:36:46 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-08-22 15:37:32 +0300
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (13.2ms)
+  Rendered articles/new.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-08-22 15:37:33 +0300
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-08-22 15:37:34 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:37:35 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:37:35 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:37:39 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"komentaras", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:38:02 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 62ms (Views: 51.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:38:02 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:38:04 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asfasfas", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:38:12 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 1259ms (Views: 1240.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:38:14 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 23ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:38:16 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fsasfasfa", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:38:47 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 861ms (Views: 843.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:38:49 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 23ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:38:50 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:38:51 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:39:15 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (25.3ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 63ms (Views: 53.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:39:16 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:8:in `index'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:39:17 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:39:17 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:8:in `index'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:39:29 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 53ms (Views: 42.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:39:30 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:8:in `index'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:39:38 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 54ms (Views: 43.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:39:38 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:41:32 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 68ms (Views: 47.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:41:32 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 17ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:41:34 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"safasfas", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `current_user' for #<Article:0x007fed1b072d70>):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:41:45 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 65ms (Views: 52.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:41:46 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:41:48 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asdgfasdads", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `current_user' for #<Article:0x00000002adba40>):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:42:03 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 63ms (Views: 52.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:03 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:05 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"adsggasd", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `article' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:42:12 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (29.2ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 68ms (Views: 56.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:12 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:14 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"adsgadsgas", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:42:28 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_nav.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 43.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:28 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 14ms (Views: 7.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:29 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:31 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:31 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:31 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:31 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:31 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:32 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:32 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:32 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:32 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:32 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:33 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:33 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Unpermitted parameter: :commenter
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:42:49 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"dsagasdgad", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:43:24 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:43:24 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:43:27 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"gdsgsdgsd", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:43:50 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.6ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1rl0xj9" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-e9s2gw" -
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 2476ms (Views: 2473.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:43:53 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:43:56 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"sdgsdg"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:44:13 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 47.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:14 +0300
+  
+ActionController::RoutingError (undefined method `belongs_to' for CommentsController:Class):
+  
+app/controllers/comments_controller.rb:2:in `<class:CommentsController>'
+app/controllers/comments_controller.rb:1:in `<top (required)>'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:16 +0300
+  
+ActionController::RoutingError (undefined method `belongs_to' for CommentsController:Class):
+  
+app/controllers/comments_controller.rb:2:in `<class:CommentsController>'
+app/controllers/comments_controller.rb:1:in `<top (required)>'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:17 +0300
+  
+ActionController::RoutingError (undefined method `belongs_to' for CommentsController:Class):
+  
+app/controllers/comments_controller.rb:2:in `<class:CommentsController>'
+app/controllers/comments_controller.rb:1:in `<top (required)>'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:18 +0300
+  
+ActionController::RoutingError (undefined method `belongs_to' for CommentsController:Class):
+  
+app/controllers/comments_controller.rb:2:in `<class:CommentsController>'
+app/controllers/comments_controller.rb:1:in `<top (required)>'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:44:28 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 56ms (Views: 45.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:29 +0300
+  
+SyntaxError (/home/arnas/Desktop/rails-5-blog/app/controllers/comments_controller.rb:2: syntax error, unexpected ':', expecting keyword_end
+belongs_to: :user
+           ^):
+  
+app/controllers/comments_controller.rb:2: syntax error, unexpected ':', expecting keyword_end
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:31 +0300
+  
+SyntaxError (/home/arnas/Desktop/rails-5-blog/app/controllers/comments_controller.rb:2: syntax error, unexpected ':', expecting keyword_end
+belongs_to: :user
+           ^):
+  
+app/controllers/comments_controller.rb:2: syntax error, unexpected ':', expecting keyword_end
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:31 +0300
+  
+SyntaxError (/home/arnas/Desktop/rails-5-blog/app/controllers/comments_controller.rb:2: syntax error, unexpected ':', expecting keyword_end
+belongs_to: :user
+           ^):
+  
+app/controllers/comments_controller.rb:2: syntax error, unexpected ':', expecting keyword_end
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:44:43 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 41.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:43 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:44:45 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"sdgsgsdgsdg"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:15:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:45:29 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (13.9ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1pbbedg" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1wub7xr" -
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 2535ms (Views: 2523.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:32 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 14ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:45:40 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:40 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:42 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asfasf", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:45:43 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:43 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:45:53 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 43.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:53 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 13ms (Views: 6.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:55 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asfasf", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "email"], ["body", "asfasf"], ["article_id", 4], ["created_at", "2017-08-22 12:45:55.230538"], ["updated_at", "2017-08-22 12:45:55.230538"]]
+  [1m[35m (149.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 157ms (Views: 0.8ms | ActiveRecord: 150.8ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:45:56 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:45:56 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:47:06 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.9ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-6j6xas" -
+Completed 500 Internal Server Error in 933ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-6j6xas" -`:
+
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: /home/arnas/Desktop/rails-5-blog/app/assets/javascripts/views/articles/show.es6: Unexpected token, expected , (24:40)
+  22 |           comment: {
+  23 |             body: document.getElementById('body').value,
+> 24 |             commenter: {ArticlesShowView.userEmail}
+     |                                         ^
+  25 |           }
+  26 |         }
+  27 | 
+    at Parser.pp$5.raise (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseObj (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3719:19)
+    at Parser.parseExprAtom (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:7238:22)
+    at Parser.pp$3.parseExprSubscripts (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3381:19)
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     7:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     8:     <%= javascript_include_tag 'application' %>
+     9:   </head>
+    10: 
+    11:   <body data-controller="<%= controller.controller_path %>" data-action="<%= controller.action_name %>">
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__375534109489452418_70328159429520'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:47:23 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1l15k1t" -
+Completed 500 Internal Server Error in 939ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1l15k1t" -`:
+
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: /home/arnas/Desktop/rails-5-blog/app/assets/javascripts/views/articles/show.es6: Unexpected token, expected , (24:40)
+  22 |           comment: {
+  23 |             body: document.getElementById('body').value,
+> 24 |             commenter: {ArticlesShowView.userEmail}
+     |                                         ^
+  25 |           }
+  26 |         }
+  27 | 
+    at Parser.pp$5.raise (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseObj (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3719:19)
+    at Parser.parseExprAtom (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:7238:22)
+    at Parser.pp$3.parseExprSubscripts (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3381:19)
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     7:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     8:     <%= javascript_include_tag 'application' %>
+     9:   </head>
+    10: 
+    11:   <body data-controller="<%= controller.controller_path %>" data-action="<%= controller.action_name %>">
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__375534109489452418_70328165152080'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:47:26 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (3.0ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1dufr9e" -
+Completed 500 Internal Server Error in 948ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Error while running `/home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1dufr9e" -`:
+
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+SyntaxError: /home/arnas/Desktop/rails-5-blog/app/assets/javascripts/views/articles/show.es6: Unexpected token, expected , (24:40)
+  22 |           comment: {
+  23 |             body: document.getElementById('body').value,
+> 24 |             commenter: {ArticlesShowView.userEmail}
+     |                                         ^
+  25 |           }
+  26 |         }
+  27 | 
+    at Parser.pp$5.raise (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:4454:13)
+    at Parser.pp.unexpected (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:1761:8)
+    at Parser.pp.expect (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:1749:33)
+    at Parser.pp$3.parseObj (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3978:12)
+    at Parser.pp$3.parseExprAtom (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3719:19)
+    at Parser.parseExprAtom (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:7238:22)
+    at Parser.pp$3.parseExprSubscripts (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3494:19)
+    at Parser.pp$3.parseMaybeUnary (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3474:19)
+    at Parser.pp$3.parseExprOps (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (/home/arnas/Desktop/rails-5-blog/node_modules/babylon/lib/index.js:3381:19)
+):
+     5:     <%= csrf_meta_tags %>
+     6:     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+     7:     <%= stylesheet_link_tag    'application', media: 'all' %>
+     8:     <%= javascript_include_tag 'application' %>
+     9:   </head>
+    10: 
+    11:   <body data-controller="<%= controller.controller_path %>" data-action="<%= controller.action_name %>">
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__375534109489452418_70328168242640'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:47:49 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (3.1ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-tkh5ax" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-ujk2v2" -
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 2452ms (Views: 2449.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:47:52 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:48:16 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (3.0ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-y7k9mg" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-3ziz41" -
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 2449ms (Views: 2447.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:48:18 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:48:24 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"Komentaras", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "arnas@coingate.com"], ["body", "Komentaras"], ["article_id", 4], ["created_at", "2017-08-22 12:48:24.118269"], ["updated_at", "2017-08-22 12:48:24.118269"]]
+  [1m[35m (137.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 143ms (Views: 0.8ms | ActiveRecord: 138.1ms)
+
+
+Started DELETE "/articles/4/comments/93" for 127.0.0.1 at 2017-08-22 15:48:26 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"gsx+44vphPqUhI5JF9I/NGyV0ieK+Vn5Zn+sshhf19o/mmnXlPd5IK2IGw2T6PpFOLMwVNXzGCFPpH8PHZh9XQ==", "article_id"=>"4", "id"=>"93"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 93], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 93]]
+  [1m[35m (60.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 68ms (ActiveRecord: 61.4ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:48:26 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:48:27 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:49:14 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:49:14 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:49:53 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asasfasf", "commenter"=>"email"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "email"], ["body", "asasfasf"], ["article_id", 4], ["created_at", "2017-08-22 12:49:53.520165"], ["updated_at", "2017-08-22 12:49:53.520165"]]
+  [1m[35m (61.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 67ms (Views: 0.6ms | ActiveRecord: 61.9ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:50:01 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-11ud3qr" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1v3lx44" -
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 2437ms (Views: 2435.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:50:04 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:50:18 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (1.2ms)
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:50:18 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:51:49 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:51:49 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:51:52 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"comment", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "arnas@coingate.com"], ["body", "comment"], ["article_id", 4], ["created_at", "2017-08-22 12:51:52.557027"], ["updated_at", "2017-08-22 12:51:52.557027"]]
+  [1m[35m (166.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 173ms (Views: 0.8ms | ActiveRecord: 167.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-08-22 15:51:56 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3Kc1QrKWhSlcFn+3fgD1rAvdGFe64X/IBX54C39f1Lxh8SJ2rYh482Ua6vP6OjDdX/v6JOXrPhAspau2eph+Ow=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:51:57 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_nav.html.erb (2.3ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-08-22 15:51:58 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (52.7ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 109ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:52:06 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9Yycvf0xOxTwVLv3u35ZfRC2sVq4hf2FFBnqbiZr8gldMecdS3RcTAhRnxQygrO9R8gB39UHxISRyI4kZroVfw==", "user"=>{"email"=>"1111@one.lt", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "1111@one.lt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 665ms (Views: 49.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-08-22 15:52:13 +0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"boh2pqRO+Ob9BQqUoVqN5DBoZSMOW98Lv+ccau85RuLGNQ0GEgufvgUALncopmckZxbVpmPZ5go6Nnggr+ihlA==", "user"=>{"email"=>"1111@one.lt", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "1111@one.lt"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "1111@one.lt"], ["encrypted_password", "$2a$11$JVxxDVC4De/3wIW8wVg33OB6f53BqIjmJ9oYP5G2yVKUb43JmZCkW"], ["created_at", "2017-08-22 12:52:13.247968"], ["updated_at", "2017-08-22 12:52:13.247968"]]
+  [1m[35m (121.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-08-22 12:52:13.371928"], ["last_sign_in_at", "2017-08-22 12:52:13.371928"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-08-22 12:52:13.373092"], ["id", 3]]
+  [1m[35m (69.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 338ms (ActiveRecord: 192.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:52:13 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:52:17 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:17 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:21 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"comment", "commenter"=>"1111@one.lt"}, "article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["commenter", "1111@one.lt"], ["body", "comment"], ["article_id", 4], ["created_at", "2017-08-22 12:52:21.034757"], ["updated_at", "2017-08-22 12:52:21.034757"]]
+  [1m[35m (200.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 206ms (Views: 0.6ms | ActiveRecord: 201.0ms)
+
+
+Started DELETE "/articles/4/comments/97" for 127.0.0.1 at 2017-08-22 15:52:23 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WYKHI2KeVZWBS8Q1ZFgrchYpozaCayWKPEPcmcHSKf7xP/yD1NsyzXlO4NbtpMGyQVcTs+/pHIu5krjTgQPOiA==", "article_id"=>"4", "id"=>"97"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 97], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 97]]
+  [1m[35m (119.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 123ms (ActiveRecord: 120.2ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:52:24 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:24 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-08-22 15:52:25 +0300
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 106ms (Views: 103.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users" for 127.0.0.1 at 2017-08-22 15:52:28 +0300
+Processing by Devise::RegistrationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9rP7d9AeyD7JiQZnJ6DcjY4eBVxEP2ZYxtlWf+wS8jteDoDXZluvZjGMIoSuXDZN2WC12Sm9X1lDCDI1rMMVTQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (105.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 110ms (ActiveRecord: 106.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:52:28 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_nav.html.erb (1.1ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-22 15:52:30 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (35.6ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 121ms (Views: 119.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-22 15:52:34 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n85cqnt3O8z9+ZJyz2HPZY72IIGKUG9tMT/aGKUZs3MNmz+H5kkEzuQShrYhFECgP2YVIvk+ZPTSGgzuA9dL9Q==", "user"=>{"email"=>"arnas@coingate.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "arnas@coingate.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-08-22 12:52:34.378118"], ["last_sign_in_at", "2017-08-22 07:59:33.148606"], ["sign_in_count", 15], ["updated_at", "2017-08-22 12:52:34.378802"], ["id", 1]]
+  [1m[35m (100.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 272ms (ActiveRecord: 101.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 15:52:34 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:52:36 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:36 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/4/comments/96" for 127.0.0.1 at 2017-08-22 15:52:37 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qvrcrZUsq4g8M+nvB9FX/pVckaIdoowSOAD+1oWCYHiYFpPXI6uE9kh9JCZl8YA9ygQRjMshO3yX9psl9Gt3DA==", "article_id"=>"4", "id"=>"96"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 96]]
+  [1m[35m (128.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 133ms (ActiveRecord: 129.7ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:52:37 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:37 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/4/comments/95" for 127.0.0.1 at 2017-08-22 15:52:38 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ASpc65t1NuNOAlZaaxjCZIpM8F0xgHPTYqumzrzI7igzxhORLfIZnTpMm5MJOBWn1RRwc+cDxL3NXcM9zSH5XA==", "article_id"=>"4", "id"=>"95"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 95], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 95]]
+  [1m[35m (219.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 223ms (ActiveRecord: 220.1ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:52:39 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:39 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/4/comments/23" for 127.0.0.1 at 2017-08-22 15:52:40 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zhY73rQgvhp5dXUVYKFdphsMHyyBrKs8smf8OUn99Pb8+nSkAqeRZA07uNwCgYplRFSfAlcvHFIdkZnKOBTjgg==", "article_id"=>"4", "id"=>"23"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 23]]
+  [1m[35m (173.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 178ms (ActiveRecord: 173.6ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:52:40 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:52:40 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:54:09 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:54:10 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 15:54:38 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 37ms (Views: 35.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 15:54:39 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserRefToComment (20170822125820)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "comments" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170822125820"]]
+  [1m[35m (75.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_article_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" ORDER BY "comments"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:04:08 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (15.1ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-z3w80u" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-21729-1typbc6" -
+  Rendered layouts/_nav.html.erb (1.5ms)
+Completed 200 OK in 9518ms (Views: 9498.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:04:18 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 24ms (Views: 7.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:04:21 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"qweqwe", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:13:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:07:35 +0300
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"qweqwe", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:12:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:07:54 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"qweqwe", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:13:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:09:23 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"qweqwe", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 32ms
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:09:30 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 1899ms (Views: 1830.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:09:33 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:09:43 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"gfdfghdfg", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:10:25 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"gfdfghdfg", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:11:50 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"gfdfghdfg", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:11:53 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"gfdfghdfg", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 0ms
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:11:55 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 46.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:11:56 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:11:59 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"sdfgasdgadsg", "commenter"=>"arnas@coingate.com"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:12:38 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (18.0ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-23867-pmfgc" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-23867-b1oqrl" -
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 2553ms (Views: 2540.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:12:41 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:12:43 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"safasfasf"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/articles/4/comments/undefined" for 127.0.0.1 at 2017-08-22 16:12:45 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QXFUPi6oy/ZZ5SH0sL2XN9hyjGI4aXlL8yBjrHEHOt9znRtEmC/kiC2r7D3SnUD0hyoMTO7qziVc1gZfAO4tqw==", "article_id"=>"4", "id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment with 'id'=undefined [WHERE "comments"."article_id" = ?]):
+  
+app/controllers/comments_controller.rb:20:in `destroy'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:12:52 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:12:53 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/articles/4/comments/94" for 127.0.0.1 at 2017-08-22 16:12:55 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K1r02JNvTcXdAEjeUD3Z5vDol2qG/Y7x0PLLX3KAQlwZtruiJehiu6lOhRcyHQ4lr7AXRFB+OZ9/BK6sA2lVKA==", "article_id"=>"4", "id"=>"94"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 94], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 94]]
+  [1m[35m (244.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 251ms (ActiveRecord: 245.4ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:12:55 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:12:55 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:12:59 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"ADD"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started DELETE "/articles/4/comments/undefined" for 127.0.0.1 at 2017-08-22 16:13:00 +0300
+Processing by CommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LqZjtRTb+5C/hJ2Pej/cKytjLa3v5golvFqHkzaae5ccSizPolzU7svKUEYYHwvodDutgzllvUsTrOJgR3Ns4w==", "article_id"=>"4", "id"=>"undefined"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."article_id" = ? AND "comments"."id" = ? LIMIT ?[0m  [["article_id", 4], ["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment with 'id'=undefined [WHERE "comments"."article_id" = ?]):
+  
+app/controllers/comments_controller.rb:20:in `destroy'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:13:02 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 47.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:13:03 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:13:17 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asfasfasfasf"}, "article_id"=>"4"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:14:16 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asfasfasfasf"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:16:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:15:27 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (14.9ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 54ms (Views: 42.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:15:28 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:15:44 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:16:in `create'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:18:33 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    21:     <script>
+    22:         App.State = {
+    23:             User: {
+    24:                 id: <%= current_user.id %>,
+    25:                 email: "<%= current_user.email %>"
+    26:             }
+    27:         }
+  
+app/views/layouts/application.html.erb:24:in `_app_views_layouts_application_html_erb__444281738556919622_70347698550060'
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:20:05 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-08-22 16:20:09 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (84.2ms)
+  Rendered layouts/_nav.html.erb (0.9ms)
+Completed 200 OK in 145ms (Views: 131.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-08-22 16:20:17 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gP17qU0lRFFTXI0N0AGnYvjFUFdhwGzXQ0RWn1BQt+Bow4xTrLQBeYPRZRngrtrj61JWuHdANHXtvTTnpJyQBQ==", "user"=>{"email"=>"arnas@coingate.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "arnas@coingate.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-08-22 13:20:17.477685"], ["last_sign_in_at", "2017-08-22 12:52:34.378118"], ["sign_in_count", 16], ["updated_at", "2017-08-22 13:20:17.478675"], ["id", 1]]
+  [1m[35m (81.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 286ms (ActiveRecord: 81.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-22 16:20:17 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:20:28 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav.html.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:20:28 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:20:31 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asd"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:16:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:21:34 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"asd"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:24:42 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:195:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:227:in `handle_unverified_request'
+devise (4.3.0) lib/devise/controllers/helpers.rb:253:in `handle_unverified_request'
+actionpack (5.1.3) lib/action_controller/metal/request_forgery_protection.rb:222:in `verify_authenticity_token'
+activesupport (5.1.3) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.3) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.3) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.3) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.3) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.3) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.3) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.3) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.3) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.3) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.3) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.3) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.3) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.3) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.3) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.3) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:24:58 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:03 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:03 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:04 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:04 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:04 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:04 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:25:10 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fghjkfhj"}, "article_id"=>"4"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `comments' for nil:NilClass):
+  
+app/controllers/comments_controller.rb:18:in `create'
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:28:02 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 40.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:28:03 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-08-22 16:28:16 +0300
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_nav.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-08-22 16:29:08 +0300
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/index.html.erb within layouts/application (27.0ms)
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --list --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-23867-hxpbir" -
+Browserify: /home/arnas/Desktop/rails-5-blog/node_modules/.bin/browserifyinc -t [ babelify --presets [ es2015 react stage-0 ] --plugins [ syntax-async-functions transform-regenerator transform-object-rest-spread ] --extensions .es6 ] --extension='.es6'  -t envify --cachefile=/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/browserifyinc-cache.json -o "/home/arnas/Desktop/rails-5-blog/tmp/cache/browserify-rails/output20170822-23867-1n2drv" -
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 2547ms (Views: 2543.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/articles/4" for 127.0.0.1 at 2017-08-22 16:29:14 +0300
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_nav.html.erb (0.7ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:29:14 +0300
+Processing by CommentsController#index as */*
+  Parameters: {"article_id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."article_id" = ?[0m  [["article_id", 4]]
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/articles/4/comments/" for 127.0.0.1 at 2017-08-22 16:29:18 +0300
+Processing by CommentsController#create as JSON
+  Parameters: {"comment"=>{"body"=>"fdgsdfg"}, "article_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "comments" ("body", "article_id", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["body", "fdgsdfg"], ["article_id", 4], ["created_at", "2017-08-22 13:29:18.777667"], ["updated_at", "2017-08-22 13:29:18.777667"], ["user_id", 1]]
+  [1m[35m (181.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 198ms (Views: 0.7ms | ActiveRecord: 182.8ms)
+
+
