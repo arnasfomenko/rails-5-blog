@@ -1,88 +1,18 @@
-import React from 'react'
+import React from 'react';
+import {Article} from './components/Article/Article';
+import {Comments} from './components/Comments/Comments.es6';
 
 class Show extends React.Component {
-    constructor(props) {
-      super(props)
-      this.state = {
-        comments: []
-      }
-    }
-
-    componentWillMount(){
-      fetch(`/articles/${ArticlesShowView.articleId}/comments/`)
-        .then(response => response.json())
-        .then(data => {
-            this.setState({comments: data})
-        })
-    }
-
-    handleSubmit(event) {
-        event.preventDefault();
-        let body = {
-          comment: {
-            body: document.getElementById('body').value,
-            commenter: App.State.User.id
-          }
-        }
-
-
-        fetch(`/articles/${ArticlesShowView.articleId}/comments/`, {
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            credentials: "same-origin",
-            body: JSON.stringify(body).replace(/"(.+)":/g, '"$1":')
-          })
-          .then(response => response.json())
-          .then(data => {
-            this.setState({comments: this.state.comments.concat(data)})
-          })
-      }
-
-
     render() {
-        return (
-            <div>
-                {this.state.comments.map((comment, index) => {
-                    console.log(comment);
-                    return (
-                        <div key={index}>
-                            <p style={{'fontSize':'14px'}}>
-                                <strong>Author: </strong>
-                                {comment.commenter.user_email}
-                            </p>
-
-                            <p style={{'fontSize':'10px'}}>
-                                <strong>Created At: </strong>
-                                {comment.date}
-                            </p>
-
-                            <p style={{'fontSize':'14px'}}>
-                            <strong>Comment: </strong>
-                              {comment.body}
-                            </p>
-
-                            <p><a className="btn btn-danger" href={ArticlesShowView.articleId + '/comments/' + comment.id} data-method="delete"> Delete Comment </a></p>
-
-                            <hr />
-                        </div>
-                    )
-                })}
-
-                <form onSubmit={this.handleSubmit.bind(this)}>
-                    <h4><p>Add New Comment : </p></h4>
-                    <p><textarea id="body" type="text" name="comment[body]" className="form-control"/></p>
-
-                    <p><button className="btn btn-secondary" name="submit" type="submit">Submit a Comment</button></p>
-                </form>
-            </div>
-        )
+      return (
+        <div>
+          <Article />
+          <Comments />
+        </div>
+      )
     }
 }
 
-
 export default () => {
-    App.ReactRender(<Show />, 'comments')
+    App.ReactRender(<Show />)
 }

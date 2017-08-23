@@ -2,24 +2,23 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :destroy]
 
   def index
-      @article = Article.find(params[:article_id])
-      @comments = @article.comments.all
-      commentArray = []
+    @article = Article.find(params[:article_id])
+    @comments = @article.comments.all
+    commentArray = []
+      @comments.each do |item|
+        commentArray.push(
+            id: item.id,
+            body: item.body,
+            article_id:item.article_id,
+            date: item.created_at.strftime('%-H:%-M:%-S %-b %-d, %Y'),
+            commenter: {
+              user_id: item.user.id,
+              user_email: item.user.email
+            },
+        )
+      end
 
-          @comments.each do |item|
-            commentArray.push(
-                id: item.id,
-                body: item.body,
-                article_id:item.article_id,
-                date: item.created_at.strftime('%-H:%-M:%-S %-b %-d, %Y'),
-                commenter: {
-                  user_id: item.user.id,
-                  user_email: item.user.email
-                },
-            )
-          end
-
-      render json: commentArray
+    render json: commentArray
   end
 
   def create

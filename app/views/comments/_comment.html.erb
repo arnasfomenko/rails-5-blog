@@ -8,11 +8,11 @@
   <%= comment.body %>
 </p>
 <% if user_signed_in? == true %>
-    <p>
-      <%= link_to 'Destroy Comment', [comment.article, comment],
-                   class: "btn btn-danger",
-                   method: :delete,
-                   data: { confirm: 'Are you sure?' } %>
-    </p>
+  <p>
+  <%= link_to 'Destroy Comment', [comment.article, comment],
+               class: "btn btn-danger",
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  </p>
 <% end %>
 <hr>
