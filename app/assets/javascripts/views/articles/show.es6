@@ -21,6 +21,7 @@ class Show extends React.Component {
         let body = {
           comment: {
             body: document.getElementById('body').value,
+            commenter: App.State.User.id
           }
         }
 
@@ -45,30 +46,33 @@ class Show extends React.Component {
         return (
             <div>
                 {this.state.comments.map((comment, index) => {
+                    console.log(comment);
                     return (
                         <div key={index}>
-                            <p style={{'font-size':'14px'}}>
-                            <strong>Author: </strong>
-                              {comment.commenter}
-                                <p style={{'font-size':'10px'}}>
-                                <strong>Created At: </strong>
-                                  {comment.created_at}
-                                </p>
+                            <p style={{'fontSize':'14px'}}>
+                                <strong>Author: </strong>
+                                {comment.commenter.user_email}
                             </p>
 
+                            <p style={{'fontSize':'10px'}}>
+                                <strong>Created At: </strong>
+                                {comment.date}
+                            </p>
 
-                            <p style={{'font-size':'14px'}}>
+                            <p style={{'fontSize':'14px'}}>
                             <strong>Comment: </strong>
                               {comment.body}
                             </p>
+
                             <p><a className="btn btn-danger" href={ArticlesShowView.articleId + '/comments/' + comment.id} data-method="delete"> Delete Comment </a></p>
+
                             <hr />
                         </div>
                     )
                 })}
 
                 <form onSubmit={this.handleSubmit.bind(this)}>
-                    <p><h4>Add New Comment : </h4></p>
+                    <h4><p>Add New Comment : </p></h4>
                     <p><textarea id="body" type="text" name="comment[body]" className="form-control"/></p>
 
                     <p><button className="btn btn-secondary" name="submit" type="submit">Submit a Comment</button></p>
