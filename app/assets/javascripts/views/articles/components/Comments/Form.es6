@@ -29,21 +29,42 @@ export class Form extends React.Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Email : </label>
+          <label className="col-sm-2 col-form-label">
+            Email :
+          </label>
           <div className="col-sm-10">
-            <input type="text" readOnly className="form-control-plaintext" id="staticEmail" value={App.State.User.email} />
+            <input
+              className="form-control-plaintext"
+              id="staticEmail"
+              readOnly
+              type="text"
+              value={App.State.User.email}
+            />
           </div>
         </div>
         <div className="form-group row">
-          <label className="col-sm-2 col-form-label">Enter your comment :</label>
+          <label className="col-sm-2 col-form-label">
+            Enter your comment :
+          </label>
           <div className="col-sm-10">
-            <textarea id="body" type="text" name="comment[body]" className="form-control"/>
+            <textarea
+              className="form-control"
+              id="body"
+              name="comment[body]"
+              type="text"
+            />
           </div>
         </div>
         <div className="form-group row">
           <div className="col-sm-10"></div>
           <div className="col-sm-2">
-            <button className="btn btn-secondary" name="submit" type="submit">Submit a Comment</button>
+            <button
+              className="btn btn-secondary"
+              name="submit"
+              type="submit"
+            >
+              Submit a Comment
+            </button>
           </div>
         </div>
       </form>

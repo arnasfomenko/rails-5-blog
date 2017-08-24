@@ -1,0 +1,41 @@
+import React from 'react';
+
+export class CommentsList extends React.Component {
+  render() {
+    return(
+      <div>
+      {this.props.comments.map((comments, index) => {
+        return (
+          <div key={index}>
+            <p style={{'fontSize':'14px'}}>
+              <strong>Author: </strong>
+              {comments.commenter.user_email}
+            </p>
+
+            <p style={{'fontSize':'10px'}}>
+              <strong>Created At: </strong>
+              {comments.date}
+            </p>
+
+            <p style={{'fontSize':'14px'}}>
+            <strong>Comment: </strong>
+              {comments.body}
+            </p>
+
+            <p>
+              <a
+                className="btn btn-danger"
+                href={ArticlesShowView.articleId + '/comments/' + comments.id}
+                data-method="delete"
+              >
+                Delete Comment
+              </a>
+            </p>
+            <hr />
+          </div>
+          )
+      })}
+      </div>
+    )
+  }
+}
