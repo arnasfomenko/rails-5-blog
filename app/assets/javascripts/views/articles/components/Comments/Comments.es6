@@ -14,22 +14,8 @@ export class Comments extends React.Component {
     fetch(`/articles/${ArticlesShowView.articleId}/comments/`)
       .then(response => response.json())
       .then(comments => {
-          this.setState({comments})
+        this.setState({comments})
       })
-    }
-
-    canDelete() {
-
-
-      <p>
-        <a
-          className="btn btn-danger"
-          href={ArticlesShowView.articleId + '/comments/' + comment.id}
-          data-method="delete"
-        >
-          Delete Comment
-        </a>
-      </p>
     }
 
     isFormAvailable() {
@@ -39,21 +25,19 @@ export class Comments extends React.Component {
            className="alert alert-light"
            role="alert"
           >
-            Please go to&nbsp;
+            {'Please go to '}
             <a
-              href="/users/sign_in"
               className="alert-link"
+              href="/users/sign_in"
             >
-              Login page&nbsp;
+              {'Login page '}
             </a>
             to add a comment
           </div>
         )
       } else {
         return (
-          <div>
-            <Form onNewComment={comment => this.setState({ comments: this.state.comments.concat(comment)})}/>
-          </div>
+          <Form onNewComment={comment => this.setState({ comments: this.state.comments.concat(comment)})}/>
         )
       }
     }

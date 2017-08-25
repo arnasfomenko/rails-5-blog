@@ -1,6 +1,25 @@
 import React from 'react';
 
 export class CommentsList extends React.Component {
+
+  canDelete(id) {
+    if(typeof App.State.User !== 'undefined') {
+      return (
+        <div>
+          <p>
+            <a
+              className="btn btn-danger"
+              href={ArticlesShowView.articleId + '/comments/' + id}
+              data-method="delete"
+            >
+              Delete Comment
+            </a>
+          </p>
+        </div>
+      )
+    }
+  }
+
   render() {
     return(
       <div>
@@ -21,16 +40,7 @@ export class CommentsList extends React.Component {
             <strong>Comment: </strong>
               {comments.body}
             </p>
-
-            <p>
-              <a
-                className="btn btn-danger"
-                href={ArticlesShowView.articleId + '/comments/' + comments.id}
-                data-method="delete"
-              >
-                Delete Comment
-              </a>
-            </p>
+              {this.canDelete(comments.id)}
             <hr />
           </div>
           )
