@@ -1,4 +1,6 @@
 import React from 'react';
+import {addComment} from '../../../../actions/comment'
+
 
 export class Form extends React.Component {
   handleSubmit(event) {
@@ -21,7 +23,7 @@ export class Form extends React.Component {
         })
         .then(response => response.json())
         .then(data => {
-          this.props.onNewComment(data)
+          App.Store.dispatch(addComment(data))
         })
     }
 
