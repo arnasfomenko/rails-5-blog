@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Assistant');
+
+body {
+  background:#E8E8EE;
+}
+.navbar-nav a {
+  font-family: 'Assistant', sans-serif;
+  text-transform: uppercase;
+  font-size:15px;
+  font-weight: 700;
+  color:#2e2e2e;
+}
+.brand a {
+  font-family: "Dancing Script";
+  font-size:30px;
+  color:#2e2e2e;
+}
