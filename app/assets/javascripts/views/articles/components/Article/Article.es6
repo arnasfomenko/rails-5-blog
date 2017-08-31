@@ -4,21 +4,15 @@ export class Article extends React.Component {
   render() {
     return (
       <div>
-        <div className="row">
-          <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <h4>
-              {ArticlesShowView.articleTitle}
-            </h4>
-          </div>
-          <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <p>
+        <div className="card border-secondary mb-3">
+          <div className="card-header">
+            {ArticlesShowView.articleTitle}<br/>
+            <small>
               {ArticlesShowView.articleDate}
-            </p>
+            </small>
           </div>
-          <div className="col-12 col-sm-12 col-md-12 col-lg-12">
-            <p>
-              {ArticlesShowView.articleBody}
-            </p>
+          <div className="card-body">
+            <p className="card-text">{ArticlesShowView.articleBody}</p>
           </div>
         </div>
         <hr />

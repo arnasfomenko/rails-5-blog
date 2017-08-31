@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
 @import url('https://fonts.googleapis.com/css?family=Assistant');
 
 body {
@@ -12,7 +12,10 @@ body {
   color:#2e2e2e;
 }
 .brand a {
-  font-family: "Dancing Script";
-  font-size:30px;
+  font-family: "Satisfy";
+  font-size:24px;
   color:#2e2e2e;
+}
+.form-control, .card, .form-control-plaintext {
+background-color: transparent;
 }
