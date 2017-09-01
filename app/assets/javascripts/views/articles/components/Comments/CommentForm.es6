@@ -18,7 +18,7 @@ let CommentForm = props => {
         <label className="col-sm-3 col-form-label">
           Enter your comment:
         </label>
-        <div className="col-sm-9">
+        <div className="col-sm-6">
           <Field
             component="textarea"
             className="form-control"
@@ -27,12 +27,9 @@ let CommentForm = props => {
             type="text"
           />
         </div>
-      </div>
-      <div className="form-group row">
-        <div className="col-sm-9"></div>
         <div className="col-sm-3">
           <button
-            className="btn btn-secondary"
+            className="btn btn-dark"
             name="submit"
             type="submit"
           >

@@ -12,7 +12,7 @@ export class CommentsList extends React.Component {
           <div>
             <p>
               <a
-                className="btn btn-danger"
+                className="btn btn-dark"
                 href={ArticlesShowView.articleId +'/comments/' + id}
                 data-method="delete"
               >
