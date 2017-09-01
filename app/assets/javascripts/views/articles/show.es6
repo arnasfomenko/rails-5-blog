@@ -16,7 +16,6 @@ class Show extends React.Component {
       App.Store.dispatch(setComments(data))
     })
   }
-
     render() {
       return (
         <div>

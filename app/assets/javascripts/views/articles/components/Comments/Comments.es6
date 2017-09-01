@@ -1,10 +1,36 @@
 import React from 'react';
-import {Form} from './Form.es6';
-import {CommentsList} from './CommentsList.es6'
+import {CommentsList} from './CommentsList'
+import CommentForm from './CommentForm'
+import {addComment} from '../../../../actions/comment'
 
 export class Comments extends React.Component {
   constructor(props) {
     super(props)
+  }
+
+  submit = (values) => {
+    console.log(values)
+      event.preventDefault();
+      let body = {
+        comment: {
+          body: document.getElementById('body').value,
+          commenter: App.State.User.id
+        }
+      }
+
+      fetch(`/articles/${ArticlesShowView.articleId}/comments/`, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          credentials: "same-origin",
+          body: JSON.stringify(body).replace(/"(.+)":/g, '"$1":')
+        })
+        .then(response => response.json())
+        .then(data => {
+          App.Store.dispatch(addComment(data))
+        })
   }
 
   isFormAvailable() {
@@ -26,7 +52,7 @@ export class Comments extends React.Component {
       )
     } else {
       return (
-        <Form onNewComment={comment => this.setState({ comments: this.props.comments.concat(comment)})}/>
+      <CommentForm onSubmit={this.submit} />
       )
     }
   }

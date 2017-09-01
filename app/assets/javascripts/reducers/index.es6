@@ -1,6 +1,6 @@
 import app from './app'
 import comments from './comment'
-import formReducer from './formReducer'
+import { reducer as formReducer } from 'redux-form';
 
 export default {
   app,
