@@ -9,28 +9,27 @@ export class Comments extends React.Component {
   }
 
   submit = (values) => {
-    console.log(values)
-      event.preventDefault();
-      let body = {
-        comment: {
-          body: document.getElementById('body').value,
-          commenter: App.State.User.id
-        }
+    event.preventDefault();
+    let body = {
+      comment: {
+        body: document.getElementById('body').value,
+        commenter: App.State.User.id
       }
+    }
 
-      fetch(`/articles/${ArticlesShowView.articleId}/comments/`, {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          credentials: "same-origin",
-          body: JSON.stringify(body).replace(/"(.+)":/g, '"$1":')
-        })
-        .then(response => response.json())
-        .then(data => {
-          App.Store.dispatch(addComment(data))
-        })
+    fetch(`/articles/${ArticlesShowView.articleId}/comments/`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        credentials: "same-origin",
+        body: JSON.stringify(body).replace(/"(.+)":/g, '"$1":')
+      })
+      .then(response => response.json())
+      .then(data => {
+        App.Store.dispatch(addComment(data))
+      })
   }
 
   isFormAvailable() {
@@ -52,7 +51,7 @@ export class Comments extends React.Component {
       )
     } else {
       return (
-      <CommentForm onSubmit={this.submit} />
+        <CommentForm onSubmit={this.submit} />
       )
     }
   }
