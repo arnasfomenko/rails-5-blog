@@ -10,12 +10,29 @@ body {
   font-size:15px;
   font-weight: 700;
   color:#2e2e2e;
+  opacity: 0.6 !important;
+}
+.navbar-nav a:hover {
+  opacity: 1 !important;
+  transform: scale(1.15);
 }
 .brand a {
   font-family: "Satisfy";
   font-size:24px;
   color:#2e2e2e;
 }
+.brand:hover {
+  transform:scale(1.15);
+}
 .form-control, .card, .form-control-plaintext {
 background-color: transparent;
+}
+.form-control:focus, .form-control-plaintext:focus  {
+  background-color: transparent;
+}
+.btn:hover {
+  transform:scale(1.05);
+}
+textarea {
+  height:150px;
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import {Article} from './components/Article/Article'
 import {Comments} from './components/Comments/Comments'
-import {fetchCommentsForPage} from '../../actions/comment'
+import {setComments} from '../../actions/comment'
 import { connect } from 'react-redux'
 
 class Show extends React.Component {
@@ -13,7 +13,7 @@ class Show extends React.Component {
     fetch(`/articles/${ArticlesShowView.articleId}/comments`)
     .then(response => response.json())
     .then(data => {
-      App.Store.dispatch(fetchCommentsForPage(data))
+      App.Store.dispatch(setComments(data))
     })
   }
 

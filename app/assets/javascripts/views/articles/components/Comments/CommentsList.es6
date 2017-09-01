@@ -5,29 +5,31 @@ export class CommentsList extends React.Component {
     super(props)
   }
 
-  canDelete(id) {
+  canDelete(id,commenter) {
     if(typeof App.State.User !== 'undefined') {
-      return (
-        <div>
-          <p>
-            <a
-              className="btn btn-danger"
-              href={ArticlesShowView.articleId + '/comments/' + id}
-              data-method="delete"
-            >
-              Delete Comment
-            </a>
-          </p>
-        </div>
-      )
+      if(App.State.User.id === commenter) {
+        return (
+          <div>
+            <p>
+              <a
+                className="btn btn-danger"
+                href={ArticlesShowView.articleId +'/comments/' + id}
+                data-method="delete"
+              >
+                Delete Comment
+              </a>
+            </p>
+          </div>
+        )
+      }
     }
   }
 
   render() {
-    if (this.props.comments[0] == undefined) {
+    if (this.props.comments[0] === undefined) {
       return (
         <div>
-          <p className="alert alert-light">There are no comments {'for this'} post.</p>
+          <p>There are no comments {'for this'} post.</p>
         </div>
       )
     } else {
@@ -50,7 +52,7 @@ export class CommentsList extends React.Component {
               <strong>Comment: </strong>
                 {comments.body}
               </p>
-                {this.canDelete(comments.id)}
+                {this.canDelete(comments.id,comments.commenter.user_id)}
               <hr />
             </div>
             )
