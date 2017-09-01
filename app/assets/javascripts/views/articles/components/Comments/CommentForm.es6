@@ -7,10 +7,18 @@ let CommentForm = props => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-group row">
-        <label className="col-sm-2 col-form-label">
-          Enter your comment :
+        <label className="col-sm-3 col-form-label">
+          Commenting as:
         </label>
-        <div className="col-sm-10">
+        <div className="col-sm-9">
+          <div className="form-control-plaintext">{App.State.User.email}</div>
+        </div>
+      </div>
+      <div className="form-group row">
+        <label className="col-sm-3 col-form-label">
+          Enter your comment:
+        </label>
+        <div className="col-sm-9">
           <Field
             component="textarea"
             className="form-control"
@@ -21,8 +29,8 @@ let CommentForm = props => {
         </div>
       </div>
       <div className="form-group row">
-        <div className="col-sm-10"></div>
-        <div className="col-sm-2">
+        <div className="col-sm-9"></div>
+        <div className="col-sm-3">
           <button
             className="btn btn-secondary"
             name="submit"
