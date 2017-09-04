@@ -3,6 +3,10 @@
 
 body {
   background:#E8E8EE;
+  font-family: "Assistant", sans-serif;
+}
+h1 {
+  font-size:24px;
 }
 .navbar-nav a {
   font-family: 'Assistant', sans-serif;
@@ -14,7 +18,7 @@ body {
 }
 .navbar-nav a:hover {
   opacity: 1 !important;
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 .brand a {
   font-family: "Satisfy";
@@ -32,6 +36,7 @@ background-color: transparent;
 }
 .btn:hover {
   transform:scale(1.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 textarea {
   height:150px;
